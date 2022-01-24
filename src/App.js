@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Header from "./Header/Header";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Profile from './Profile/Profile';
+import {eleves} from './data'
+import { Alert } from "./Alert";
 function App() {
+  // const handlename=(y,x,z)=> {
+  //   return alert(`
+  //   ${y} 
+  //   ${x} 
+  //   ${z}`)
+  // } 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>      
+    <Profile Data={eleves} info={Alert} />
     </div>
   );
-}
+};
+
 
 export default App;
